@@ -1,8 +1,8 @@
 import java.util.Calendar;
 
-public class Cliente {
+public class Funcionario {
         
-    public Cliente(String primeiroNome, String sobrenome, String profissao, Calendar nascimento){
+    public Funcionario(String primeiroNome, String sobrenome, String profissao, Calendar nascimento){
         this.primeiroNome = primeiroNome;
         this.sobrenome = sobrenome;
         this.profissao = profissao;
@@ -25,4 +25,6 @@ public class Cliente {
     }
 
     
+}
+
 }
