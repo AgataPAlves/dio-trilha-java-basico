@@ -1,8 +1,9 @@
 public class ContaPoupanca extends Conta {
 
     
-    public ContaPoupanca(Cliente cliente){
-        super(cliente);
+    public ContaPoupanca(Cliente cliente, Funcionario funcionario){
+        super(cliente, funcionario);
+        
     }
     
 
@@ -13,9 +14,9 @@ public class ContaPoupanca extends Conta {
     }
 
     public String toString(){
-        return (" === Conta Poupança " + numero + " === /r/n") + 
-        (String.format("Titular: %s", this.cliente.getNome())) + " /r/n" +
-        (String.format("Agencia: %d", this.agencia)) + " /r/n" +        
+        return (" === Conta Poupança " + this.getNumero() + " === /r/n") + 
+        (String.format("Titular: %s", this.getCliente().getNome())) + " /r/n" +
+        (String.format("Agencia: %d", this.getAgencia())) + " /r/n" +        
         (String.format("Saldo: %.2f", this.saldo));
         }
 

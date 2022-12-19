@@ -2,17 +2,19 @@ import java.util.Calendar;
 
 public class Funcionario {
         
-    public Funcionario(String primeiroNome, String sobrenome, String profissao, Calendar nascimento){
+    public Funcionario(String primeiroNome, String sobrenome, String cargo, Calendar nascimento, String endereco){
         this.primeiroNome = primeiroNome;
         this.sobrenome = sobrenome;
-        this.profissao = profissao;
-        this.dataDeNascimento = nascimento;        
+        this.cargo = cargo;
+        this.dataDeNascimento = nascimento;   
+        this.endereco = endereco;      
     }
     
     public String primeiroNome;
     public String sobrenome;
-    public String profissao;
+    public String cargo;
     public Calendar dataDeNascimento;
+    public String endereco;
 
 
     public String getNome() {
@@ -24,7 +26,11 @@ public class Funcionario {
         this.primeiroNome = pNome;
     }
 
-    
+    public String toString(){        
+        return "Funcionário " + primeiroNome + " " + sobrenome + "/r /n" +
+        "Data de Nascimento: " + dataDeNascimento + " /r /n" + 
+        "Cargo: " + cargo;
+    } 
 }
 
-}
+

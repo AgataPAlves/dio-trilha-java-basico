@@ -1,7 +1,7 @@
 public class ContaCorrente extends Conta {
 
-    public ContaCorrente(Cliente cliente){
-        super(cliente);
+    public ContaCorrente(Cliente cliente, Funcionario funcionario){
+        super(cliente, funcionario);
     }
     
     @Override
@@ -11,9 +11,9 @@ public class ContaCorrente extends Conta {
     }
 
     public String toString(){
-        return (" === Conta Corrente " + numero + " === /r/n") + 
-        (String.format("Titular: %s", this.cliente.getNome())) + " /r/n" +
-        (String.format("Agencia: %d", this.agencia)) + " /r/n" +        
+        return (" === Conta Corrente " + this.getNumero() + " === /r/n") + 
+        (String.format("Titular: %s", this.getCliente().getNome())) + " /r/n" +
+        (String.format("Agencia: %d", this.getAgencia())) + " /r/n" +        
         (String.format("Saldo: %.2f", this.saldo));
         }
 
